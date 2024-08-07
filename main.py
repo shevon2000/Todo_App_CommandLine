@@ -1,8 +1,17 @@
-prompt = "Enter a todo : "
 todos = []
 
 while True:
-    todo = input(prompt)        #clean the room
-    print(todo.capitalize())    #Clean the room
-    print(todo.title())         #Clean The Room
-    todos.append(todo)
+    user_action = input("Type add, show or exit : ")
+    user_action = user_action.strip()   #cut the spaces after the input
+
+    match user_action:
+        case 'add':
+            todo = input("Enter a todo : ")
+            todos.append(todo)
+        case 'show':
+            for item in todos:
+                print(item)
+        case 'exit':
+            break
+
+print("Bye!")
