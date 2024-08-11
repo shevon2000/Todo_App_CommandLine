@@ -1,0 +1,5 @@
+eat
+wash
+throw
+wash
+go
